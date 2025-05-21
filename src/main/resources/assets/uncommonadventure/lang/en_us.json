@@ -1,3 +1,6 @@
 {
-  "item.uncommonadventure.boiled_rotten_flesh": "Boiled rotten flesh"
+  "item.uncommonadventure.boiled_rotten_flesh": "Boiled rotten flesh",
+  "uncommonadventure.common_items": "Uncommon Adventures",
+  "item.uncommonadventure.clone_locator": "Clone locator",
+  "block.uncommonadventure.death_clone_box": "Death clone box"
 }
