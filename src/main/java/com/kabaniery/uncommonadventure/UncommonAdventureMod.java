@@ -4,6 +4,7 @@ import com.kabaniery.uncommonadventure.blocks.GeneralBlocks;
 import com.kabaniery.uncommonadventure.blocks.blockEntities.GeneralBlockEntities;
 import com.kabaniery.uncommonadventure.creative.GeneralTabs;
 import com.kabaniery.uncommonadventure.item.GeneralItems;
+import com.kabaniery.uncommonadventure.particles.GeneralParticles;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
@@ -50,6 +51,7 @@ public class UncommonAdventureMod
         GeneralItems.register(modEventBus);
         GeneralBlocks.register(modEventBus);
         GeneralBlockEntities.register(modEventBus);
+        GeneralParticles.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
