@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    "III"
+  ],
+  "key": {
+    "I": {
+      "item": "uncommonadventure:boiled_rotten_flesh"
+    }
+  },
+  "result": {
+    "item": "create:belt_connector",
+    "count": 1
+  }
+}
