@@ -1,6 +1,7 @@
 package com.kabaniery.uncommonadventure.item;
 
 import com.kabaniery.uncommonadventure.UncommonAdventureMod;
+import com.kabaniery.uncommonadventure.item.CloneLocator.CloneLocator;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -17,4 +18,5 @@ public class GeneralItems {
 
     public static final RegistryObject<Item> BOILED_ROTTEN_FLESH = ITEMS.register("boiled_rotten_flesh",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CLONE_LOCATOR = ITEMS.register("clone_locator", CloneLocator::new);
 }

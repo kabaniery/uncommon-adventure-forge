@@ -1,5 +1,8 @@
 package com.kabaniery.uncommonadventure;
 
+import com.kabaniery.uncommonadventure.blocks.GeneralBlocks;
+import com.kabaniery.uncommonadventure.blocks.blockEntities.GeneralBlockEntities;
+import com.kabaniery.uncommonadventure.creative.GeneralTabs;
 import com.kabaniery.uncommonadventure.item.GeneralItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -42,7 +45,11 @@ public class UncommonAdventureMod
     {
         IEventBus modEventBus = context.getModEventBus();
 
+
+        GeneralTabs.register(modEventBus);
         GeneralItems.register(modEventBus);
+        GeneralBlocks.register(modEventBus);
+        GeneralBlockEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
