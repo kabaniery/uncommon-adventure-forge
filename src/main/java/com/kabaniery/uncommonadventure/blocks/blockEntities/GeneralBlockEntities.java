@@ -1,5 +1,6 @@
 package com.kabaniery.uncommonadventure.blocks.blockEntities;
 
+import com.kabaniery.uncommonadventure.UncommonAdventureMod;
 import com.kabaniery.uncommonadventure.blocks.DeathCloneBox.DeathCloneBlockEntity;
 import com.kabaniery.uncommonadventure.blocks.GeneralBlocks;
 import com.kabaniery.uncommonadventure.blocks.WarpController.WarpControllerEntity;
@@ -11,7 +12,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class GeneralBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(
-            ForgeRegistries.BLOCK_ENTITY_TYPES, "uncommonadventure");
+            ForgeRegistries.BLOCK_ENTITY_TYPES, UncommonAdventureMod.MODID);
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

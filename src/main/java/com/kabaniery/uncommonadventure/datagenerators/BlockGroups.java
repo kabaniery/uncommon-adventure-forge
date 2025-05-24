@@ -11,4 +11,8 @@ public class BlockGroups {
     public static final Set<RegistryObject<Block>> SIDE_TOP = Set.of(
 
     );
+
+    public static final Set<RegistryObject<Block>> ALL_SIDE = Set.of(
+            GeneralBlocks.ARMED_FRAME_BLOCK
+    );
 }
