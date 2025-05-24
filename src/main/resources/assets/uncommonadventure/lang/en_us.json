@@ -4,5 +4,6 @@
   "item.uncommonadventure.clone_locator": "Clone locator",
   "block.uncommonadventure.death_clone_box": "Death clone box",
   "block.uncommonadventure.warp_controller":"Warp controller",
-  "block.uncommonadventure.armed_frame_block": "Armed frame block"
+  "block.uncommonadventure.armed_frame_block": "Armed frame block",
+  "block.uncommonadventure.winter_closet": "Winter closet"
 }

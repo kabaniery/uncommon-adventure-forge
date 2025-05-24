@@ -9,7 +9,8 @@ import net.minecraftforge.registries.RegistryObject;
 public class GeneralBlockItems {
     public static final RegistryObject<Item> DEATH_CLONE_BOX_ITEM = registerBlockItem(GeneralBlocks.DEATH_CLONE_BLOCK, "death_clone_box");
     public static final RegistryObject<Item> WARP_CONTROLLER_ITEM = registerBlockItem(GeneralBlocks.WARP_CONTROLLER_BLOCK, "warp_controller");
-    public static final RegistryObject<Item> ARMED_FRAME_BLOCK = registerBlockItem(GeneralBlocks.ARMED_FRAME_BLOCK, "armed_frame_block");
+    public static final RegistryObject<Item> ARMED_FRAME_ITEM = registerBlockItem(GeneralBlocks.ARMED_FRAME_BLOCK, "armed_frame_block");
+    public static final RegistryObject<Item> WINTER_CLOSET_ITEM = registerBlockItem(GeneralBlocks.WINTER_CLOSET, "winter_closet");
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(RegistryObject<T> block, String name) {
         return GeneralItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));

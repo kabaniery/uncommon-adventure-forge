@@ -3,6 +3,7 @@ package com.kabaniery.uncommonadventure.blocks;
 import com.kabaniery.uncommonadventure.UncommonAdventureMod;
 import com.kabaniery.uncommonadventure.blocks.DeathCloneBox.DeathCloneBox;
 import com.kabaniery.uncommonadventure.blocks.WarpController.WarpController;
+import com.kabaniery.uncommonadventure.blocks.WinterCloset.WinterCloset;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -27,4 +28,6 @@ public class GeneralBlocks {
     public static final RegistryObject<Block> ARMED_FRAME_BLOCK = BLOCKS.register("armed_frame_block",
             UndestroyableBlock::new);
 
+    public static final RegistryObject<Block> WINTER_CLOSET = BLOCKS.register("winter_closet",
+            WinterCloset::new);
 }

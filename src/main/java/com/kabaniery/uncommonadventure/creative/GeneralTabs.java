@@ -24,7 +24,8 @@ public class GeneralTabs {
                         output.accept(GeneralItems.CLONE_LOCATOR.get());
                         output.accept(GeneralBlockItems.DEATH_CLONE_BOX_ITEM.get());
                         output.accept(GeneralBlockItems.WARP_CONTROLLER_ITEM.get());
-                        output.accept(GeneralBlockItems.ARMED_FRAME_BLOCK.get());
+                        output.accept(GeneralBlockItems.ARMED_FRAME_ITEM.get());
+                        output.accept(GeneralBlockItems.WINTER_CLOSET_ITEM.get());
                     }))
                     .build());
 
