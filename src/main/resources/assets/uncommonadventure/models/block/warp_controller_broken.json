@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "side": "uncommonadventure:block/warp_controller_side_broken",
+    "end": "uncommonadventure:block/warp_controller_top_broken"
+  }
+}

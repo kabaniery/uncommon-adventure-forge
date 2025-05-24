@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "broken=true": { "model":  "uncommonadventure:block/warp_controller_broken" },
+    "broken=false": { "model":  "uncommonadventure:block/warp_controller_worked" }
+  }
+}

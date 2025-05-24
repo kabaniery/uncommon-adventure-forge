@@ -3,6 +3,7 @@ package com.kabaniery.uncommonadventure;
 import com.kabaniery.uncommonadventure.blocks.GeneralBlocks;
 import com.kabaniery.uncommonadventure.blocks.blockEntities.GeneralBlockEntities;
 import com.kabaniery.uncommonadventure.creative.GeneralTabs;
+import com.kabaniery.uncommonadventure.gui.GeneralMenuTypes;
 import com.kabaniery.uncommonadventure.item.GeneralItems;
 import com.kabaniery.uncommonadventure.particles.GeneralParticles;
 import com.mojang.logging.LogUtils;
@@ -46,12 +47,13 @@ public class UncommonAdventureMod
     {
         IEventBus modEventBus = context.getModEventBus();
 
-
+        GeneralMenuTypes.register(modEventBus);
         GeneralTabs.register(modEventBus);
         GeneralItems.register(modEventBus);
         GeneralBlocks.register(modEventBus);
         GeneralBlockEntities.register(modEventBus);
         GeneralParticles.register(modEventBus);
+
 
         modEventBus.addListener(this::commonSetup);
 

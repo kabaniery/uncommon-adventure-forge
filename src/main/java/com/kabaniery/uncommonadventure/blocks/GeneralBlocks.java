@@ -2,6 +2,7 @@ package com.kabaniery.uncommonadventure.blocks;
 
 import com.kabaniery.uncommonadventure.UncommonAdventureMod;
 import com.kabaniery.uncommonadventure.blocks.DeathCloneBox.DeathCloneBox;
+import com.kabaniery.uncommonadventure.blocks.WarpController.WarpController;
 import com.kabaniery.uncommonadventure.item.GeneralItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -27,5 +28,10 @@ public class GeneralBlocks {
             DeathCloneBox::new);
 
     public static final RegistryObject<Item> DEATH_CLONE_BOX_ITEM = registerBlockItem(DEATH_CLONE_BLOCK, "death_clone_box");
+
+    public static final RegistryObject<Block> WARP_CONTROLLER_BLOCK = BLOCKS.register("warp_controller",
+            WarpController::new);
+
+    public static final RegistryObject<Item> WARP_CONTROLLER_ITEM = registerBlockItem(WARP_CONTROLLER_BLOCK, "warp_controller");
 
 }
