@@ -1,6 +1,5 @@
 package com.kabaniery.uncommonadventure.item.armor.material;
 
-import com.kabaniery.uncommonadventure.UncommonAdventureMod;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.ArmorItem;
@@ -9,7 +8,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 
 public enum FrozenResistMaterials implements ArmorMaterial, FrozenResistMaterial {
     BASIC_INSULATED(20, new int[]{0, 0, 0,0}, 0, SoundEvents.ARMOR_EQUIP_LEATHER, Ingredient.EMPTY, "basic_insulate",
-            0, 0, 20);
+            0, 0, 11);
 
 
     private final int durability;
