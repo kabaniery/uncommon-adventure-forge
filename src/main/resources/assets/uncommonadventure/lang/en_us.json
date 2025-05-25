@@ -1,9 +1,12 @@
 {
   "item.uncommonadventure.boiled_rotten_flesh": "Boiled rotten flesh",
   "uncommonadventure.common_items": "Uncommon Adventures",
-  "item.uncommonadventure.clone_locator": "Clone locator",
   "block.uncommonadventure.death_clone_box": "Death clone box",
   "block.uncommonadventure.warp_controller":"Warp controller",
   "block.uncommonadventure.armed_frame_block": "Armed frame block",
-  "block.uncommonadventure.winter_closet": "Winter closet"
+  "block.uncommonadventure.winter_closet": "Winter closet",
+  "item.uncommonadventure.basic_insulated_helmet": "Insulated helmet",
+  "item.uncommonadventure.basic_insulated_chestplate": "Insulated chestplate",
+  "item.uncommonadventure.basic_insulated_leggins": "Insulated leggins",
+  "item.uncommonadventure.basic_insulated_boots": "Insulated boots"
 }
