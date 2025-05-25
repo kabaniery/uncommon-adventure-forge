@@ -45,14 +45,9 @@ public class PlayerInventoryEvents {
 
     @SubscribeEvent
     public static void onPlayerJoin(PlayerEvent.PlayerRespawnEvent event) {
-        System.out.println("OK");
         if (!(event.getEntity() instanceof ServerPlayer player)) return;
-
-        System.out.println("a2");
-
         if (!death_positions.containsKey(player.getUUID())) return;
 
-        System.out.println("a3");
 
         ItemStack stack = GeneralItems.CLONE_LOCATOR.get().getDefaultInstance();
         CloneLocator.setPos(stack, death_positions.get(player.getUUID()));
