@@ -27,6 +27,9 @@ public class GeneralTabs {
                         output.accept(GeneralBlockItems.WARP_CONTROLLER_ITEM.get());
                         output.accept(GeneralBlockItems.ARMED_FRAME_ITEM.get());
                         output.accept(GeneralBlockItems.WINTER_CLOSET_ITEM.get());
+                        output.accept(GeneralBlockItems.POISONED_SNOW.get());
+                        output.accept(GeneralBlockItems.FROZEN_DIRT.get());
+                        output.accept(GeneralBlockItems.POISONED_ICE.get());
 
                         output.accept(BasicInsulatedArmors.BASIC_HELMET.get());
                         output.accept(BasicInsulatedArmors.BASIC_CHESTPLATE.get());

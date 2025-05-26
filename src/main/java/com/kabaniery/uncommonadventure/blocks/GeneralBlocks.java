@@ -5,6 +5,8 @@ import com.kabaniery.uncommonadventure.blocks.DeathCloneBox.DeathCloneBox;
 import com.kabaniery.uncommonadventure.blocks.WarpController.WarpController;
 import com.kabaniery.uncommonadventure.blocks.WinterCloset.WinterCloset;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -30,4 +32,13 @@ public class GeneralBlocks {
 
     public static final RegistryObject<Block> WINTER_CLOSET = BLOCKS.register("winter_closet",
             WinterCloset::new);
+
+    public static final RegistryObject<Block> POISONED_SNOW_BLOCK = BLOCKS.register("poisoned_snow_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SNOW_BLOCK)));
+
+    public static final RegistryObject<Block> FROZEN_DIRT = BLOCKS.register("frozen_dirt",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.ICE)));
+
+    public static final RegistryObject<Block> POISONED_ICE = BLOCKS.register("poisoned_ice",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.ICE)));
 }
