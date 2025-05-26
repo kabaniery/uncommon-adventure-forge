@@ -1,5 +1,6 @@
 package com.kabaniery.uncommonadventure;
 
+import com.kabaniery.uncommonadventure.datagenerators.MBlockModelProviders;
 import com.kabaniery.uncommonadventure.datagenerators.MItemModelProviders;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
@@ -20,6 +21,8 @@ public class MDataGenerator {
         PackOutput output = generator.getPackOutput();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
+
+        generator.addProvider(event.includeClient(), new MBlockModelProviders(output, existingFileHelper));
 
         generator.addProvider(event.includeClient(), new MItemModelProviders(output, existingFileHelper));
     }

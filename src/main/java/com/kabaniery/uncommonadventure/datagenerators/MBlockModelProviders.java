@@ -12,12 +12,13 @@ import net.minecraftforge.registries.RegistryObject;
 
 
 public class MBlockModelProviders extends BlockStateProvider {
-    public MBlockModelProviders(PackOutput output, String modid, ExistingFileHelper exFileHelper) {
-        super(output, modid, exFileHelper);
+    public MBlockModelProviders(PackOutput output, ExistingFileHelper exFileHelper) {
+        super(output, UncommonAdventureMod.MODID, exFileHelper);
     }
 
     @Override
     protected void registerStatesAndModels() {
+        BlockGroups.ALL_SIDE.forEach(this::commonBlockWithItem);
     }
 
     private void commonBlockWithItem(RegistryObject<Block> block) {
