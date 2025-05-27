@@ -8,5 +8,8 @@
   "item.uncommonadventure.basic_insulated_helmet": "Insulated helmet",
   "item.uncommonadventure.basic_insulated_chestplate": "Insulated chestplate",
   "item.uncommonadventure.basic_insulated_leggins": "Insulated leggins",
-  "item.uncommonadventure.basic_insulated_boots": "Insulated boots"
+  "item.uncommonadventure.basic_insulated_boots": "Insulated boots",
+  "block.uncommonadventure.poisoned_snow_block": "Poisoned snow",
+  "block.uncommonadventure.frozen_dirt": "Frozen dirt",
+  "block.uncommonadventure.poisoned_ice": "Poisoned ice"
 }
