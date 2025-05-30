@@ -25,12 +25,12 @@ public class TestBiomeSource extends BiomeSource {
 
     @Override
     protected Codec<? extends BiomeSource> codec() {
-        return null;
+        return CODEC;
     }
 
     @Override
     protected Stream<Holder<Biome>> collectPossibleBiomes() {
-        return Stream.empty();
+        return Stream.of(GeneralBiomes.FROZEN_PLACE_HOLDER);
     }
 
     @Override
