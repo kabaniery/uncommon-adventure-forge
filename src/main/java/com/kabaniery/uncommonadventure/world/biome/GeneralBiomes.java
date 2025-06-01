@@ -1,4 +1,4 @@
-package com.kabaniery.uncommonadventure.world.biome_source;
+package com.kabaniery.uncommonadventure.world.biome;
 
 import com.kabaniery.uncommonadventure.UncommonAdventureMod;
 import net.minecraft.core.Holder;
@@ -8,10 +8,8 @@ import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.*;
-import net.minecraftforge.common.world.MobSpawnSettingsBuilder;
 
 public class GeneralBiomes {
     public static final ResourceKey<Biome> FROZEN_PLACE = ResourceKey.create(Registries.BIOME,

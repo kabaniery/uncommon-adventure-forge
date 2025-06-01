@@ -1,7 +1,7 @@
 package com.kabaniery.uncommonadventure.datagenerators;
 
 import com.kabaniery.uncommonadventure.UncommonAdventureMod;
-import com.kabaniery.uncommonadventure.world.biome_source.GeneralBiomes;
+import com.kabaniery.uncommonadventure.world.biome.GeneralBiomes;
 import com.kabaniery.uncommonadventure.world.dimension.GeneralDimensions;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;

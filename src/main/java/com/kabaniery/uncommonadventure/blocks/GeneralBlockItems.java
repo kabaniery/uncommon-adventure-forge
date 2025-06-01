@@ -14,6 +14,7 @@ public class GeneralBlockItems {
     public static final RegistryObject<Item> POISONED_SNOW = registerBlockItem(GeneralBlocks.POISONED_SNOW_BLOCK, "poisoned_snow_block");
     public static final RegistryObject<Item> FROZEN_DIRT = registerBlockItem(GeneralBlocks.FROZEN_DIRT, "frozen_dirt");
     public static final RegistryObject<Item> POISONED_ICE = registerBlockItem(GeneralBlocks.POISONED_ICE, "poisoned_ice");
+    public static final RegistryObject<Item> PORTAL_BLOCK = registerBlockItem(GeneralBlocks.PORTAL_BLOCK, "portal_block");
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(RegistryObject<T> block, String name) {
         return GeneralItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));

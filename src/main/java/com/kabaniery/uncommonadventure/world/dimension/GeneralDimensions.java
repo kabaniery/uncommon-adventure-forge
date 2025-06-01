@@ -1,8 +1,7 @@
 package com.kabaniery.uncommonadventure.world.dimension;
 
-import com.ibm.icu.impl.Pair;
 import com.kabaniery.uncommonadventure.UncommonAdventureMod;
-import com.kabaniery.uncommonadventure.world.biome_source.GeneralBiomes;
+import com.kabaniery.uncommonadventure.world.biome.GeneralBiomes;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
@@ -12,16 +11,13 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
-import net.minecraft.world.level.biome.Climate;
 import net.minecraft.world.level.biome.FixedBiomeSource;
-import net.minecraft.world.level.biome.MultiNoiseBiomeSource;
 import net.minecraft.world.level.dimension.BuiltinDimensionTypes;
 import net.minecraft.world.level.dimension.DimensionType;
 import net.minecraft.world.level.dimension.LevelStem;
 import net.minecraft.world.level.levelgen.NoiseBasedChunkGenerator;
 import net.minecraft.world.level.levelgen.NoiseGeneratorSettings;
 
-import java.util.List;
 import java.util.OptionalLong;
 
 public class GeneralDimensions {

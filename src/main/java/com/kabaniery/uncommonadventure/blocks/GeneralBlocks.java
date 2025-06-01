@@ -2,6 +2,7 @@ package com.kabaniery.uncommonadventure.blocks;
 
 import com.kabaniery.uncommonadventure.UncommonAdventureMod;
 import com.kabaniery.uncommonadventure.blocks.DeathCloneBox.DeathCloneBox;
+import com.kabaniery.uncommonadventure.blocks.PortalBlock.PortalBlock;
 import com.kabaniery.uncommonadventure.blocks.WarpController.WarpController;
 import com.kabaniery.uncommonadventure.blocks.WinterCloset.WinterCloset;
 import net.minecraft.world.level.block.Block;
@@ -41,4 +42,7 @@ public class GeneralBlocks {
 
     public static final RegistryObject<Block> POISONED_ICE = BLOCKS.register("poisoned_ice",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.ICE)));
+
+    public static final RegistryObject<Block> PORTAL_BLOCK = BLOCKS.register("portal_block",
+            PortalBlock::new);
 }

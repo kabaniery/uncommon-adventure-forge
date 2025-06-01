@@ -1,15 +1,12 @@
-package com.kabaniery.uncommonadventure.world.biome_source;
+package com.kabaniery.uncommonadventure.world.biome;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.Holder;
-import net.minecraft.core.HolderSet;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.BiomeSource;
 import net.minecraft.world.level.biome.Climate;
-import net.minecraft.world.level.biome.MultiNoiseBiomeSource;
 
-import javax.crypto.spec.PSource;
 import java.util.stream.Stream;
 
 public class TestBiomeSource extends BiomeSource {
