@@ -9,6 +9,7 @@ import com.kabaniery.uncommonadventure.item.GeneralItems;
 import com.kabaniery.uncommonadventure.item.armor.material.FrozenResistMaterial;
 import com.kabaniery.uncommonadventure.networking.FreezeSyncPacket;
 import com.kabaniery.uncommonadventure.networking.PacketHandler;
+import com.kabaniery.uncommonadventure.world.dimension.GeneralDimensions;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
@@ -81,6 +82,22 @@ public class PlayerModEvents {
             });
         }
     }
+
+    @SubscribeEvent
+    public void onPlayerChangedDimension(PlayerEvent.PlayerChangedDimensionEvent event) {
+        Player player = event.getEntity();
+        player.getCapability(PlayerFreezingProvider.PLAYER_FREEZING).ifPresent(freezing -> {
+            if (event.getTo().equals(GeneralDimensions.FROZENWORLD_LEVEL_KEY)) {
+                freezing.setDisabled(false);
+            } else {
+                freezing.setDisabled(true);
+            }
+
+            PacketHandler.sendToPlayer(new FreezeSyncPacket(freezing.getFreezing(), freezing.isDisabled()), (ServerPlayer) player);
+        });
+
+    }
+
     private static int tick = 0;
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
@@ -88,8 +105,7 @@ public class PlayerModEvents {
             tick++;
             Player player = event.player;
             player.getCapability(PlayerFreezingProvider.PLAYER_FREEZING).ifPresent(freezing -> {
-                if (player.getOnPos().getY() > 30) {
-                    freezing.setDisabled(false);
+                if (player.getOnPos().getY() > 30 && !freezing.isDisabled()) {
                     Integer resistance = 100;
                     for (ItemStack itemStack : player.getInventory().armor) {
                         if (itemStack.getItem() instanceof ArmorItem armorItem && armorItem.getMaterial() instanceof FrozenResistMaterial material) {
@@ -101,7 +117,7 @@ public class PlayerModEvents {
                     }
                     freezing.substractFreezing(resistance);
                 } else {
-                    freezing.setDisabled(true);
+                    freezing.addFreezing(1);
                 }
 
                 if (tick == 20) {

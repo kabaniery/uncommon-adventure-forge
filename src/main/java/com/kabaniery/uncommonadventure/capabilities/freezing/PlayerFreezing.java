@@ -5,7 +5,7 @@ import net.minecraft.nbt.CompoundTag;
 public class PlayerFreezing implements IPlayerFreezing {
     private final double MAX_FREEZING = 20;
     private double freezing;
-    private boolean disabled = false;
+    private boolean disabled = true;
 
     @Override
     public boolean isDisabled() {
