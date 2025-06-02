@@ -3,10 +3,12 @@ package com.kabaniery.uncommonadventure;
 import com.kabaniery.uncommonadventure.blocks.GeneralBlocks;
 import com.kabaniery.uncommonadventure.blocks.blockEntities.GeneralBlockEntities;
 import com.kabaniery.uncommonadventure.creative.GeneralTabs;
+import com.kabaniery.uncommonadventure.entity.GeneralEntities;
 import com.kabaniery.uncommonadventure.gui.GeneralMenuTypes;
 import com.kabaniery.uncommonadventure.item.GeneralItems;
 import com.kabaniery.uncommonadventure.networking.PacketHandler;
 import com.kabaniery.uncommonadventure.particles.GeneralParticles;
+import com.kabaniery.uncommonadventure.world.surfaces.FrozenSurfacesBuilder;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -22,6 +24,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import terrablender.api.SurfaceRuleManager;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(UncommonAdventureMod.MODID)
@@ -40,6 +43,7 @@ public class UncommonAdventureMod
         GeneralItems.register(modEventBus);
         GeneralBlocks.register(modEventBus);
         GeneralBlockEntities.register(modEventBus);
+        GeneralEntities.register(modEventBus);
         GeneralParticles.register(modEventBus);
 
 
@@ -59,6 +63,7 @@ public class UncommonAdventureMod
     {
         event.enqueueWork(() -> {
             PacketHandler.registerPackets();
+            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, UncommonAdventureMod.MODID, FrozenSurfacesBuilder.FROZEN_SURFACE);
         });
     }
 

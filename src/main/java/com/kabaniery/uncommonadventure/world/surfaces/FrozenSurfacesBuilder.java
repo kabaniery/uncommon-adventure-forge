@@ -6,8 +6,7 @@ import net.minecraft.world.level.levelgen.SurfaceRules;
 
 public class FrozenSurfacesBuilder {
     public static final SurfaceRules.RuleSource FROZEN_SURFACE = SurfaceRules.sequence(
-            SurfaceRules.ifTrue(
-                    SurfaceRules.isBiome(GeneralBiomes.FROZEN_PLACE),
+
                     SurfaceRules.sequence(
                             SurfaceRules.ifTrue(
                                     SurfaceRules.ON_FLOOR,
@@ -18,6 +17,6 @@ public class FrozenSurfacesBuilder {
                                     SurfaceRules.state(GeneralBlocks.POISONED_ICE.get().defaultBlockState())
                             )
                     )
-            )
+            
     );
 }

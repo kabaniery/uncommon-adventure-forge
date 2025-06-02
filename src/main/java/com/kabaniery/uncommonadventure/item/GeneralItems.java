@@ -2,6 +2,8 @@ package com.kabaniery.uncommonadventure.item;
 
 import com.kabaniery.uncommonadventure.UncommonAdventureMod;
 import com.kabaniery.uncommonadventure.item.CloneLocator.CloneLocator;
+import com.kabaniery.uncommonadventure.item.WarpStone.DisabledWarpStone;
+import com.kabaniery.uncommonadventure.item.WarpStone.WarpStone;
 import com.kabaniery.uncommonadventure.item.armor.BasicInsulatedArmors;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -23,4 +25,9 @@ public class GeneralItems {
     public static final RegistryObject<Item> BOILED_ROTTEN_FLESH = ITEMS.register("boiled_rotten_flesh",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> CLONE_LOCATOR = ITEMS.register("clone_locator", CloneLocator::new);
+
+    public static final RegistryObject<Item> DISABLED_WARP_STONE = ITEMS.register("disabled_warp_stone", DisabledWarpStone::new);
+    public static final RegistryObject<Item> WARP_STONE = ITEMS.register("warp_stone", WarpStone::new);
+    public static final RegistryObject<Item> BROKEN_WARP_STONE = ITEMS.register("broken_warp_stone",
+            () -> new Item(new Item.Properties().stacksTo(16)));
 }
