@@ -45,4 +45,7 @@ public class GeneralBlocks {
 
     public static final RegistryObject<Block> PORTAL_BLOCK = BLOCKS.register("portal_block",
             PortalBlock::new);
+
+    public static final RegistryObject<Block> MAGENTA_ORE = BLOCKS.register("magenta_ore",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COPPER_ORE)));
 }
