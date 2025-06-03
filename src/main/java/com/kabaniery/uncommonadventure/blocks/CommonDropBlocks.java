@@ -38,6 +38,4 @@ public class CommonDropBlocks {
     public static final RegistryObject<Block> PORTAL_BLOCK = BLOCKS_REGISTER.register("portal_block",
             PortalBlock::new);
 
-    public static final RegistryObject<Block> MAGENTA_ORE = BLOCKS_REGISTER.register("magenta_ore",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COPPER_ORE)));
 }

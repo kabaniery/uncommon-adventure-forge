@@ -5,7 +5,6 @@ import com.kabaniery.uncommonadventure.blocks.GeneralBlocks;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.RegistryObject;
 
-import java.util.HashSet;
 import java.util.Set;
 
 public class BlockGroups {
@@ -18,6 +17,6 @@ public class BlockGroups {
             CommonDropBlocks.POISONED_SNOW_BLOCK,
             CommonDropBlocks.FROZEN_DIRT,
             CommonDropBlocks.POISONED_ICE,
-            CommonDropBlocks.MAGENTA_ORE
+            GeneralBlocks.MAGENTA_ORE
     );
 }

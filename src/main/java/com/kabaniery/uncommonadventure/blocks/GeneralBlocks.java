@@ -25,4 +25,6 @@ public class GeneralBlocks {
 
     public static final RegistryObject<Block> DEATH_CLONE_BLOCK = BLOCKS.register("death_clone_box",
             DeathCloneBox::new);
+    public static final RegistryObject<Block> MAGENTA_ORE = BLOCKS.register("magenta_ore",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COPPER_ORE)));
 }
