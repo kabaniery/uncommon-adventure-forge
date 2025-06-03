@@ -21,18 +21,20 @@ public class DisabledWarpStone extends Item {
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
         ItemStack handed = pPlayer.getItemInHand(pUsedHand);
         if (pLevel.dimension() == Level.OVERWORLD && pPlayer instanceof ServerPlayer serverPlayer) {
+            System.out.println("asd");
             BlockPos spawnPos = serverPlayer.getRespawnPosition();
+            System.out.println(spawnPos);
             if (spawnPos != null) {
                 ItemStack warp = GeneralItems.WARP_STONE.get().getDefaultInstance();
                 BlockPos pos = pPlayer.getOnPos();
                 WarpStone.setPosition(warp, pos);
 
-                pPlayer.setItemInHand(pUsedHand, warp);
-                pPlayer.setPosRaw(spawnPos.getX(), spawnPos.getY(), spawnPos.getZ());
+                serverPlayer.setItemInHand(pUsedHand, warp);
+                serverPlayer.teleportTo(spawnPos.getX(), spawnPos.getY() + 1, spawnPos.getZ());
                 return new InteractionResultHolder<>(InteractionResult.SUCCESS, warp);
             }
             return new InteractionResultHolder<>(InteractionResult.FAIL, handed);
         }
-        return new InteractionResultHolder<>(InteractionResult.PASS, handed);
+        return new InteractionResultHolder<>(InteractionResult.SUCCESS, handed);
     }
 }

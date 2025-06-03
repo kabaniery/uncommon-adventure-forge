@@ -41,13 +41,14 @@ public class WarpStone extends Item {
         ItemStack handed = pPlayer.getItemInHand(pUsedHand);
         if (pLevel.dimension() == Level.OVERWORLD && pPlayer instanceof ServerPlayer serverPlayer) {
             BlockPos destPos = getDestPosition(handed);
+            System.out.println("destPos: " + destPos);
             if (destPos != null) {
                 ItemStack newItem = GeneralItems.BROKEN_WARP_STONE.get().getDefaultInstance();
                 newItem.setCount(1);
                 serverPlayer.setItemInHand(pUsedHand, newItem);
-                serverPlayer.setPos(destPos.getX(), destPos.getY(), destPos.getZ());
+                serverPlayer.teleportTo(destPos.getX(), destPos.getY() + 1, destPos.getZ());
             }
         }
-        return InteractionResultHolder.pass(pPlayer.getItemInHand(pUsedHand));
+        return InteractionResultHolder.success(pPlayer.getItemInHand(pUsedHand));
     }
 }
