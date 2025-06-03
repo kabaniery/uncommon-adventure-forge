@@ -1,5 +1,6 @@
 package com.kabaniery.uncommonadventure.world.surfaces;
 
+import com.kabaniery.uncommonadventure.blocks.CommonDropBlocks;
 import com.kabaniery.uncommonadventure.blocks.GeneralBlocks;
 import com.kabaniery.uncommonadventure.world.biome.GeneralBiomes;
 import net.minecraft.world.level.levelgen.SurfaceRules;
@@ -10,11 +11,11 @@ public class FrozenSurfacesBuilder {
                     SurfaceRules.sequence(
                             SurfaceRules.ifTrue(
                                     SurfaceRules.ON_FLOOR,
-                                    SurfaceRules.state(GeneralBlocks.POISONED_SNOW_BLOCK.get().defaultBlockState())
+                                    SurfaceRules.state(CommonDropBlocks.POISONED_SNOW_BLOCK.get().defaultBlockState())
                             ),
                             SurfaceRules.ifTrue(
                                     SurfaceRules.UNDER_FLOOR,
-                                    SurfaceRules.state(GeneralBlocks.POISONED_ICE.get().defaultBlockState())
+                                    SurfaceRules.state(CommonDropBlocks.POISONED_ICE.get().defaultBlockState())
                             )
                     )
             

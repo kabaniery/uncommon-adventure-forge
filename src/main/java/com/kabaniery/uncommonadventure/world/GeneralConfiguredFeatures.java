@@ -2,6 +2,7 @@ package com.kabaniery.uncommonadventure.world;
 
 import com.kabaniery.uncommonadventure.Config;
 import com.kabaniery.uncommonadventure.UncommonAdventureMod;
+import com.kabaniery.uncommonadventure.blocks.CommonDropBlocks;
 import com.kabaniery.uncommonadventure.blocks.GeneralBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
@@ -24,7 +25,7 @@ public class GeneralConfiguredFeatures {
         RuleTest stoneReplaceable = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
 
         OreConfiguration.TargetBlockState overworldMagentaOres = OreConfiguration.target(stoneReplaceable,
-                GeneralBlocks.MAGENTA_ORE.get().defaultBlockState());
+                CommonDropBlocks.MAGENTA_ORE.get().defaultBlockState());
 
         register(context, MAGENTA_ORE_KEY, Feature.ORE, new OreConfiguration(List.of(overworldMagentaOres), 9));
     }

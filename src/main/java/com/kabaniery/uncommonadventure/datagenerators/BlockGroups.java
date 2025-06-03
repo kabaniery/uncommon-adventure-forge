@@ -1,5 +1,6 @@
 package com.kabaniery.uncommonadventure.datagenerators;
 
+import com.kabaniery.uncommonadventure.blocks.CommonDropBlocks;
 import com.kabaniery.uncommonadventure.blocks.GeneralBlocks;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.RegistryObject;
@@ -13,10 +14,10 @@ public class BlockGroups {
     );
 
     public static final Set<RegistryObject<Block>> ALL_SIDE = Set.of(
-            GeneralBlocks.ARMED_FRAME_BLOCK,
-            GeneralBlocks.POISONED_SNOW_BLOCK,
-            GeneralBlocks.FROZEN_DIRT,
-            GeneralBlocks.POISONED_ICE,
-            GeneralBlocks.MAGENTA_ORE
+            CommonDropBlocks.ARMED_FRAME_BLOCK,
+            CommonDropBlocks.POISONED_SNOW_BLOCK,
+            CommonDropBlocks.FROZEN_DIRT,
+            CommonDropBlocks.POISONED_ICE,
+            CommonDropBlocks.MAGENTA_ORE
     );
 }

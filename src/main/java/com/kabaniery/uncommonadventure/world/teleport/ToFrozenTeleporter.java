@@ -1,5 +1,6 @@
 package com.kabaniery.uncommonadventure.world.teleport;
 
+import com.kabaniery.uncommonadventure.blocks.CommonDropBlocks;
 import com.kabaniery.uncommonadventure.blocks.GeneralBlocks;
 import com.kabaniery.uncommonadventure.blocks.PortalBlock.PortalBlock;
 import net.minecraft.core.BlockPos;
@@ -53,7 +54,7 @@ public class ToFrozenTeleporter implements ITeleporter {
                 }
             }
             if (doSetBlock) {
-                destWorld.setBlock(destinationPos, GeneralBlocks.PORTAL_BLOCK.get().defaultBlockState(), 3);
+                destWorld.setBlock(destinationPos, CommonDropBlocks.PORTAL_BLOCK.get().defaultBlockState(), 3);
             }
         }
 

@@ -19,33 +19,10 @@ public class GeneralBlocks {
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
+        CommonDropBlocks.BLOCKS_REGISTER.register(eventBus);
         GeneralBlockItems.init();
     }
 
     public static final RegistryObject<Block> DEATH_CLONE_BLOCK = BLOCKS.register("death_clone_box",
             DeathCloneBox::new);
-
-    public static final RegistryObject<Block> WARP_CONTROLLER_BLOCK = BLOCKS.register("warp_controller",
-            WarpController::new);
-
-    public static final RegistryObject<Block> ARMED_FRAME_BLOCK = BLOCKS.register("armed_frame_block",
-            UndestroyableBlock::new);
-
-    public static final RegistryObject<Block> WINTER_CLOSET = BLOCKS.register("winter_closet",
-            WinterCloset::new);
-
-    public static final RegistryObject<Block> POISONED_SNOW_BLOCK = BLOCKS.register("poisoned_snow_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SNOW_BLOCK)));
-
-    public static final RegistryObject<Block> FROZEN_DIRT = BLOCKS.register("frozen_dirt",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.ICE)));
-
-    public static final RegistryObject<Block> POISONED_ICE = BLOCKS.register("poisoned_ice",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.ICE)));
-
-    public static final RegistryObject<Block> PORTAL_BLOCK = BLOCKS.register("portal_block",
-            PortalBlock::new);
-
-    public static final RegistryObject<Block> MAGENTA_ORE = BLOCKS.register("magenta_ore",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COPPER_ORE)));
 }
