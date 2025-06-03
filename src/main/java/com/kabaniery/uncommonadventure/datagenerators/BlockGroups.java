@@ -15,6 +15,8 @@ public class BlockGroups {
     public static final Set<RegistryObject<Block>> ALL_SIDE = Set.of(
             GeneralBlocks.ARMED_FRAME_BLOCK,
             GeneralBlocks.POISONED_SNOW_BLOCK,
-            GeneralBlocks.FROZEN_DIRT
+            GeneralBlocks.FROZEN_DIRT,
+            GeneralBlocks.POISONED_ICE,
+            GeneralBlocks.MAGENTA_ORE
     );
 }
