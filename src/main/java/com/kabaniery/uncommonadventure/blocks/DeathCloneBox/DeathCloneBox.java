@@ -20,7 +20,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class DeathCloneBox extends Block implements EntityBlock {
     public DeathCloneBox() {
-        super(BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK));
+        super(BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK).noLootTable());
     }
 
     @Override

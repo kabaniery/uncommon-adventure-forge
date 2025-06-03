@@ -20,6 +20,8 @@ import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
@@ -31,6 +33,7 @@ public class BlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        CommonDropBlocks.BLOCKS_REGISTER.getEntries().stream().forEach(block -> this.dropSelf(block.get()));
         this.add(GeneralBlocks.MAGENTA_ORE.get(),
                         LootTable.lootTable().withPool(LootPool.lootPool()
                                 .setRolls(ConstantValue.exactly(1))
@@ -42,6 +45,9 @@ public class BlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected @NotNull Iterable<Block> getKnownBlocks() {
-        return CommonDropBlocks.BLOCKS_REGISTER.getEntries().stream().map(RegistryObject::get)::iterator;
+        List<Block> allBlocks = new ArrayList<>();
+        allBlocks.addAll(CommonDropBlocks.BLOCKS_REGISTER.getEntries().stream().map(RegistryObject::get).toList());
+        allBlocks.addAll(GeneralBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get).toList());
+        return allBlocks;
     }
 }
