@@ -30,4 +30,6 @@ public class GeneralItems {
     public static final RegistryObject<Item> WARP_STONE = ITEMS.register("warp_stone", WarpStone::new);
     public static final RegistryObject<Item> BROKEN_WARP_STONE = ITEMS.register("broken_warp_stone",
             () -> new Item(new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> MAGENTA_CRYSTAL = ITEMS.register("magenta_crystal",
+            () -> new Item(new Item.Properties().stacksTo(64)));
 }

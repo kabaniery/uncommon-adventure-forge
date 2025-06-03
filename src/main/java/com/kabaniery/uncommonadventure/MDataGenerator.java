@@ -1,7 +1,9 @@
 package com.kabaniery.uncommonadventure;
 
+import com.kabaniery.uncommonadventure.datagenerators.GeneralLootTableProvider;
 import com.kabaniery.uncommonadventure.datagenerators.MBlockModelProviders;
 import com.kabaniery.uncommonadventure.datagenerators.MItemModelProviders;
+import com.kabaniery.uncommonadventure.datagenerators.loot.BlockLootTables;
 import com.kabaniery.uncommonadventure.datagenerators.MWorldGenProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
@@ -28,5 +30,7 @@ public class MDataGenerator {
         generator.addProvider(event.includeClient(), new MItemModelProviders(output, existingFileHelper));
 
         generator.addProvider(event.includeServer(), new MWorldGenProvider(output, lookupProvider));
+
+        generator.addProvider(event.includeServer(), GeneralLootTableProvider.create(output));
     }
 }
