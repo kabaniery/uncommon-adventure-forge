@@ -1,0 +1,17 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "uncommonadventure:magenta_crystal",
+      "count": 2
+    },
+    {
+      "item": "minecraft:copper_ingot"
+    }
+  ],
+  "results": [
+    {
+      "item": "uncommonadventure:disabled_warp_stone"
+    }
+  ]
+}

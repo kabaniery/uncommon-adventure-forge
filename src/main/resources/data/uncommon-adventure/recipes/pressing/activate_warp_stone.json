@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "uncommonadventure:broken_warp_stone"
+    }
+  ],
+  "results": [
+    {
+      "item": "uncommonadventure:disabled_warp_stone"
+    }
+  ]
+}

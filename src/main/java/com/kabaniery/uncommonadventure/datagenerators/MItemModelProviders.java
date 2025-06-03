@@ -7,6 +7,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
+import net.minecraft.world.entity.animal.Panda;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.armortrim.TrimMaterial;
@@ -46,5 +47,8 @@ public class MItemModelProviders extends ItemModelProvider {
         basicItem(BasicInsulatedArmors.BASIC_LEGGINS.get());
         basicItem(BasicInsulatedArmors.BASIC_BOOTS.get());
         basicItem(GeneralItems.MAGENTA_CRYSTAL.get());
+        basicItem(GeneralItems.DISABLED_WARP_STONE.get());
+        basicItem(GeneralItems.WARP_STONE.get());
+        basicItem(GeneralItems.BROKEN_WARP_STONE.get());
     }
 }
