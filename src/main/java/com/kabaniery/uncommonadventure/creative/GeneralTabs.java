@@ -35,6 +35,7 @@ public class GeneralTabs {
                         output.accept(BasicInsulatedArmors.BASIC_CHESTPLATE.get());
                         output.accept(BasicInsulatedArmors.BASIC_LEGGINS.get());
                         output.accept(BasicInsulatedArmors.BASIC_BOOTS.get());
+                        output.accept(GeneralItems.DISABLED_WARP_STONE.get());
                     }))
                     .build());
 
