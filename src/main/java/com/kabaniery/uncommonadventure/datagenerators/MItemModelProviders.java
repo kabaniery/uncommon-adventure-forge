@@ -45,5 +45,6 @@ public class MItemModelProviders extends ItemModelProvider {
         basicItem(BasicInsulatedArmors.BASIC_CHESTPLATE.get());
         basicItem(BasicInsulatedArmors.BASIC_LEGGINS.get());
         basicItem(BasicInsulatedArmors.BASIC_BOOTS.get());
+        basicItem(GeneralItems.MAGENTA_CRYSTAL.get());
     }
 }
