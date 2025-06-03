@@ -1,6 +1,7 @@
 package com.kabaniery.uncommonadventure.blocks.blockEntities;
 
 import com.kabaniery.uncommonadventure.UncommonAdventureMod;
+import com.kabaniery.uncommonadventure.blocks.CommonDropBlocks;
 import com.kabaniery.uncommonadventure.blocks.DeathCloneBox.DeathCloneBlockEntity;
 import com.kabaniery.uncommonadventure.blocks.GeneralBlocks;
 import com.kabaniery.uncommonadventure.blocks.WarpController.WarpControllerEntity;
@@ -24,5 +25,5 @@ public class GeneralBlockEntities {
 
     public static final RegistryObject<BlockEntityType<WarpControllerEntity>> WARP_CONTROLLER_ENTITY =
             BLOCK_ENTITIES.register("warp_controller_entity",
-                    () -> BlockEntityType.Builder.of(WarpControllerEntity::new, GeneralBlocks.WARP_CONTROLLER_BLOCK.get()).build(null));
+                    () -> BlockEntityType.Builder.of(WarpControllerEntity::new, CommonDropBlocks.WARP_CONTROLLER_BLOCK.get()).build(null));
 }

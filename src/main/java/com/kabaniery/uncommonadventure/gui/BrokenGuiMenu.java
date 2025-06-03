@@ -1,5 +1,6 @@
 package com.kabaniery.uncommonadventure.gui;
 
+import com.kabaniery.uncommonadventure.blocks.CommonDropBlocks;
 import com.kabaniery.uncommonadventure.blocks.GeneralBlocks;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
@@ -46,7 +47,7 @@ public class BrokenGuiMenu extends AbstractContainerMenu {
 
     @Override
     public boolean stillValid(Player player) {
-        return AbstractContainerMenu.stillValid(access, player, GeneralBlocks.WARP_CONTROLLER_BLOCK.get());
+        return AbstractContainerMenu.stillValid(access, player, CommonDropBlocks.WARP_CONTROLLER_BLOCK.get());
     }
 
 }
