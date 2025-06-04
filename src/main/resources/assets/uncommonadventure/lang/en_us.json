@@ -1,15 +1,24 @@
 {
-  "item.uncommonadventure.boiled_rotten_flesh": "Boiled rotten flesh",
   "uncommonadventure.common_items": "Uncommon Adventures",
+
   "block.uncommonadventure.death_clone_box": "Death clone box",
   "block.uncommonadventure.warp_controller":"Warp controller",
   "block.uncommonadventure.armed_frame_block": "Armed frame block",
   "block.uncommonadventure.winter_closet": "Winter closet",
+  "block.uncommonadventure.poisoned_snow_block": "Poisoned snow",
+  "block.uncommonadventure.frozen_dirt": "Frozen dirt",
+  "block.uncommonadventure.poisoned_ice": "Poisoned ice",
+  "block.uncommonadventure.portal_block": "Portal block",
+  "block.uncommonadventure.magenta_ore": "Magenta ore",
+
+  "item.uncommonadventure.boiled_rotten_flesh": "Boiled rotten flesh",
   "item.uncommonadventure.basic_insulated_helmet": "Insulated helmet",
   "item.uncommonadventure.basic_insulated_chestplate": "Insulated chestplate",
   "item.uncommonadventure.basic_insulated_leggins": "Insulated leggins",
   "item.uncommonadventure.basic_insulated_boots": "Insulated boots",
-  "block.uncommonadventure.poisoned_snow_block": "Poisoned snow",
-  "block.uncommonadventure.frozen_dirt": "Frozen dirt",
-  "block.uncommonadventure.poisoned_ice": "Poisoned ice"
+  "item.uncommonadventure.clone_locator": "Clone locator",
+  "item.uncommonadventure.warp_stone": "Warp stone",
+  "item.uncommonadventure.broken_warp_stone": "Broken warp stone",
+  "item.uncommonadventure.magenta_crystal": "Magenta crystal",
+  "item.uncommonadventure.disabled_warp_stone": "Disabled warp stone"
 }
