@@ -5,6 +5,7 @@ import com.kabaniery.uncommonadventure.item.CloneLocator.CloneLocator;
 import com.kabaniery.uncommonadventure.item.WarpStone.DisabledWarpStone;
 import com.kabaniery.uncommonadventure.item.WarpStone.WarpStone;
 import com.kabaniery.uncommonadventure.item.armor.BasicInsulatedArmors;
+import com.kabaniery.uncommonadventure.item.overheated.OverHeatedItems;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -20,6 +21,7 @@ public class GeneralItems {
 
         // Кастомные хранилища
         BasicInsulatedArmors.init();
+        OverHeatedItems.init();
     }
 
     public static final RegistryObject<Item> BOILED_ROTTEN_FLESH = ITEMS.register("boiled_rotten_flesh",
